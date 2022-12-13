@@ -20,6 +20,7 @@
 		8C50EA4D2947059100D6F4E0 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C50EA4B2947059100D6F4E0 /* ProfileCell.xib */; };
 		8C50EA502947194F00D6F4E0 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C50EA4E2947194F00D6F4E0 /* MenuCell.swift */; };
 		8C50EA512947194F00D6F4E0 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C50EA4F2947194F00D6F4E0 /* MenuCell.xib */; };
+		FE2066E52948BF4900E95341 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2066E42948BF4900E95341 /* SettingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		8C50EA4B2947059100D6F4E0 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		8C50EA4E2947194F00D6F4E0 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		8C50EA4F2947194F00D6F4E0 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		FE2066E42948BF4900E95341 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				8C50EA1A2947016200D6F4E0 /* AppDelegate.swift */,
 				8C50EA1C2947016200D6F4E0 /* SceneDelegate.swift */,
+				FE2066E42948BF4900E95341 /* SettingModel.swift */,
 				8C50EA4E2947194F00D6F4E0 /* MenuCell.swift */,
 				8C50EA4F2947194F00D6F4E0 /* MenuCell.xib */,
 				8C50EA1E2947016200D6F4E0 /* ViewController.swift */,
@@ -274,6 +277,7 @@
 			files = (
 				8C50EA1F2947016200D6F4E0 /* ViewController.swift in Sources */,
 				8C50EA502947194F00D6F4E0 /* MenuCell.swift in Sources */,
+				FE2066E52948BF4900E95341 /* SettingModel.swift in Sources */,
 				8C50EA4C2947059100D6F4E0 /* ProfileCell.swift in Sources */,
 				8C50EA1B2947016200D6F4E0 /* AppDelegate.swift in Sources */,
 				8C50EA1D2947016200D6F4E0 /* SceneDelegate.swift in Sources */,

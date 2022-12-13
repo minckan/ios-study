@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileCell: UITableViewCell {
     
-    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var profileImageView: UIImage!
     @IBOutlet weak var topTitle: UILabel!
     @IBOutlet weak var bottomDescription: UILabel!
     override func awakeFromNib() {
