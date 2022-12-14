@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyIDViewController" customModule="Setting_Clone_App" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="SvG-Ga-f8C" id="ff2-ac-Lmo"/>
+                <outlet property="emailTextField" destination="tMS-yQ-hFh" id="PrM-AQ-r0O"/>
+                <outlet property="nextButton" destination="lYU-LE-Stl" id="48a-a6-xND"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvG-Ga-f8C">
+                    <rect key="frame" x="20" y="64" width="68.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                    <connections>
+                        <action selector="doCancel:" destination="-1" eventType="touchUpInside" id="xx9-4z-Ay5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYU-LE-Stl">
+                    <rect key="frame" x="340" y="64" width="54" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pv-u2-stm">
+                    <rect key="frame" x="141.5" y="124" width="131.5" height="43"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iCloud 및 기타 Apple 서비스에서 사용할 Apple ID로 로그인하십시오." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64r-af-Nf1">
+                    <rect key="frame" x="20" y="217" width="374" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppleID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsV-b9-XHX">
+                    <rect key="frame" x="20" y="307" width="60.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMS-yQ-hFh">
+                    <rect key="frame" x="95.5" y="308" width="298.5" height="18.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wT-92-6tX">
+                    <rect key="frame" x="0.0" y="336.5" width="414" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="I0s-or-pah"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIr-JN-Qjk">
+                    <rect key="frame" x="93.5" y="367.5" width="227" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Apple ID가 없거나 잊어버렸습니까?"/>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Hpe-MJ-6eG">
+                    <rect key="frame" x="30" y="438.5" width="354" height="30"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lbk-VU-F5N">
+                            <rect key="frame" x="0.0" y="1.5" width="63.5" height="25.5"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ezb-BV-g7W">
+                            <rect key="frame" x="72.5" y="2.5" width="63.5" height="24.5"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.quarternote.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="s7K-xT-Nm6">
+                            <rect key="frame" x="145" y="0.5" width="64" height="29"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="84H-Er-OdJ">
+                            <rect key="frame" x="218" y="0.5" width="63.5" height="29.5"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallet.pass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UNV-Tj-B0Z">
+                            <rect key="frame" x="290.5" y="0.0" width="63.5" height="30"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="UNV-Tj-B0Z" secondAttribute="bottom" id="1oo-x9-UnC"/>
+                        <constraint firstAttribute="height" constant="30" id="7oV-UJ-e1E"/>
+                        <constraint firstItem="UNV-Tj-B0Z" firstAttribute="top" secondItem="Hpe-MJ-6eG" secondAttribute="top" id="F4f-oL-OJA"/>
+                        <constraint firstAttribute="bottom" secondItem="Lbk-VU-F5N" secondAttribute="bottom" id="Jnr-3O-63J"/>
+                        <constraint firstItem="s7K-xT-Nm6" firstAttribute="top" secondItem="Hpe-MJ-6eG" secondAttribute="top" id="OvO-GR-DoE"/>
+                        <constraint firstAttribute="bottom" secondItem="84H-Er-OdJ" secondAttribute="bottom" id="R9r-ST-86W"/>
+                        <constraint firstItem="Lbk-VU-F5N" firstAttribute="top" secondItem="Hpe-MJ-6eG" secondAttribute="top" id="YCe-Gr-AEi"/>
+                        <constraint firstAttribute="bottom" secondItem="Ezb-BV-g7W" secondAttribute="bottom" id="g42-Oy-p3A"/>
+                        <constraint firstItem="84H-Er-OdJ" firstAttribute="top" secondItem="Hpe-MJ-6eG" secondAttribute="top" id="m5p-Fe-wgn"/>
+                        <constraint firstAttribute="bottom" secondItem="s7K-xT-Nm6" secondAttribute="bottom" id="sJn-no-IoA"/>
+                        <constraint firstItem="Ezb-BV-g7W" firstAttribute="top" secondItem="Hpe-MJ-6eG" secondAttribute="top" id="xoT-C9-GSR"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cC-KN-0aD">
+                    <rect key="frame" x="0.0" y="297" width="414" height="1"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="nV9-8u-raa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lYU-LE-Stl" secondAttribute="trailing" constant="20" id="0O2-wc-o8M"/>
+                <constraint firstAttribute="trailing" secondItem="64r-af-Nf1" secondAttribute="trailing" constant="20" id="0cO-uL-RGC"/>
+                <constraint firstItem="64r-af-Nf1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0wC-KU-RQN"/>
+                <constraint firstItem="Hpe-MJ-6eG" firstAttribute="top" secondItem="EIr-JN-Qjk" secondAttribute="bottom" constant="40" id="2JS-W4-tyu"/>
+                <constraint firstItem="Hpe-MJ-6eG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4AB-3M-mbe"/>
+                <constraint firstItem="tMS-yQ-hFh" firstAttribute="top" secondItem="7cC-KN-0aD" secondAttribute="bottom" constant="10" id="5si-P3-RHu"/>
+                <constraint firstItem="lYU-LE-Stl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="8i0-BG-0aQ"/>
+                <constraint firstItem="EIr-JN-Qjk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9VI-0t-fsb"/>
+                <constraint firstItem="Hpe-MJ-6eG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Elw-vm-mo2"/>
+                <constraint firstAttribute="trailing" secondItem="7cC-KN-0aD" secondAttribute="trailing" id="F5Q-Yq-W69"/>
+                <constraint firstItem="64r-af-Nf1" firstAttribute="top" secondItem="5Pv-u2-stm" secondAttribute="bottom" constant="20" id="PGZ-gp-Mj9"/>
+                <constraint firstItem="tMS-yQ-hFh" firstAttribute="centerY" secondItem="BsV-b9-XHX" secondAttribute="centerY" id="Xb6-2h-LrD"/>
+                <constraint firstItem="7wT-92-6tX" firstAttribute="top" secondItem="tMS-yQ-hFh" secondAttribute="bottom" constant="10" id="ZR9-ne-ylC"/>
+                <constraint firstItem="64r-af-Nf1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Zv2-Cu-jMG"/>
+                <constraint firstItem="5Pv-u2-stm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cob-lm-s2J"/>
+                <constraint firstItem="5Pv-u2-stm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="ddZ-qt-sfe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tMS-yQ-hFh" secondAttribute="trailing" constant="20" id="g4M-2O-svg"/>
+                <constraint firstItem="64r-af-Nf1" firstAttribute="top" secondItem="5Pv-u2-stm" secondAttribute="bottom" constant="50" id="gz0-zA-qQ8"/>
+                <constraint firstItem="tMS-yQ-hFh" firstAttribute="leading" secondItem="BsV-b9-XHX" secondAttribute="trailing" constant="15" id="ig4-oa-l66"/>
+                <constraint firstItem="7wT-92-6tX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lol-z6-lkA"/>
+                <constraint firstItem="tMS-yQ-hFh" firstAttribute="top" secondItem="64r-af-Nf1" secondAttribute="bottom" constant="50" id="mBP-L1-ypd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hpe-MJ-6eG" secondAttribute="trailing" constant="30" id="mS7-hw-FTs"/>
+                <constraint firstItem="SvG-Ga-f8C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nhO-QG-J68"/>
+                <constraint firstItem="SvG-Ga-f8C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="qZ6-y7-5JZ"/>
+                <constraint firstItem="BsV-b9-XHX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="qce-eE-CPk"/>
+                <constraint firstItem="7cC-KN-0aD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rSd-U3-A04"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7wT-92-6tX" secondAttribute="trailing" id="skA-3O-E6p"/>
+                <constraint firstItem="EIr-JN-Qjk" firstAttribute="top" secondItem="7wT-92-6tX" secondAttribute="bottom" constant="30" id="yBF-xP-Mua"/>
+            </constraints>
+            <point key="canvasLocation" x="66.666666666666671" y="150"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="a" catalog="system" width="128" height="128"/>
+        <image name="bubble.right" catalog="system" width="128" height="110"/>
+        <image name="cloud" catalog="system" width="128" height="88"/>
+        <image name="music.quarternote.3" catalog="system" width="128" height="103"/>
+        <image name="wallet.pass" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
