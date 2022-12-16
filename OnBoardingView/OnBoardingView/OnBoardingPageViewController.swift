@@ -65,7 +65,6 @@ class OnBoardingPageViewController: UIPageViewController {
         self.view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false // 오토레이아웃 설정하기 위해 설정
         
-        
         button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         button.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         button.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
