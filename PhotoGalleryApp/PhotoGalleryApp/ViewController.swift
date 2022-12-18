@@ -9,6 +9,8 @@ import UIKit
 import PhotosUI
 
 class ViewController: UIViewController {
+    
+    var fetchResult:PHFetchResult<PHAsset>?
 
     @IBOutlet weak var photoCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -41,8 +43,37 @@ class ViewController: UIViewController {
 
     @objc func checkPermission() {
         if PHPhotoLibrary.authorizationStatus() == .authorized || PHPhotoLibrary.authorizationStatus() == .limited {
-            showGallery()
-        } else if PHPhotoLibrary.a
+            DispatchQueue.main.async {
+                self.showGallery()
+            }
+            
+        } else if PHPhotoLibrary.authorizationStatus() == .denied {
+            DispatchQueue.main.async {
+                self.showAuthorizationDeniedAlert()
+            }
+            
+        } else if PHPhotoLibrary.authorizationStatus() == .notDetermined {
+            // not determined 안물어본상태
+            PHPhotoLibrary.requestAuthorization { status in
+                self.checkPermission()
+            }
+        }
+    }
+    
+    func showAuthorizationDeniedAlert() {
+        let alert  = UIAlertController(title: "포토 라이브러리 접근 권한을 활성회 해주세요.", message: nil, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "닫기", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "설정으로 가기", style: .default, handler: { action in
+            guard let url = URL(string: UIApplication.openSettingsURLString) else {
+                return
+            }
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
      func showGallery() {
@@ -61,20 +92,24 @@ class ViewController: UIViewController {
     }
     
     @objc func refresh() {
-        
+        self.photoCollectionView.reloadData()
     }
 
 }
 
 extension ViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return self.fetchResult?.count ?? 0
     }
     
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+        
+        if let asset = self.fetchResult?[indexPath.row] {
+            cell.loadImage(asset: asset)
+        }
         
         return cell
     }
@@ -84,6 +119,16 @@ extension ViewController:UICollectionViewDataSource {
 
 extension ViewController:PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+//        results.map($0.assetIdentifier )
+        let identifiers = results.map{
+            $0.assetIdentifier ?? ""
+        }
+        
+        self.fetchResult = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: nil)
+        
+        self.photoCollectionView.reloadData()
+        
+
         self.dismiss(animated: true)
     }
     
